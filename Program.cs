@@ -33,6 +33,10 @@ namespace rock_paper_scissors
                     }
                     Console.Write("0 - Exit\nEnter your move: ");
                     user = Convert.ToInt32(Console.ReadLine()) - 1;
+                    if(user == -1)
+                    {
+                        return;
+                    }
                 }
                 while (user >= args.Length + 1);
                 Console.WriteLine($"Your move: {args[user]}");
