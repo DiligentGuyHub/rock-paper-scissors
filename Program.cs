@@ -9,7 +9,7 @@ namespace rock_paper_scissors
     {
         static void Main(string[] args)
         {
-            if(args.Length % 2 == 1 && args.Length >= 3 && args.Distinct().Count() == args.Count())
+            if (args.Length % 2 == 1 && args.Length >= 3 && args.Distinct().Count() == args.Count())
             {
                 // 1. Generate safe 128-bit key
                 byte[] key = new byte[128];
@@ -19,27 +19,56 @@ namespace rock_paper_scissors
                 }
                 // 2. Computer move
                 int computer = RandomNumberGenerator.GetInt32(0, args.Length);
-                // 3. Calculate HMAC
+                // 3. Calculate and show HMAC
                 var HMAC = HashMessage(key, StringEncode(args[computer]));
                 Console.WriteLine($"\nHMAC: {HashEncode(HMAC)}\n");
                 // 4. User move
-                int answer = 0;
+                int user = -1;
                 do
                 {
                     Console.WriteLine("Available moves:");
-                    foreach(var arg in args)
+                    foreach (var arg in args)
                     {
                         Console.WriteLine($"{Array.IndexOf(args, arg) + 1} - {arg}");
                     }
                     Console.Write("0 - Exit\nEnter your move: ");
-                    answer = Convert.ToInt32(Console.ReadLine());
+                    user = Convert.ToInt32(Console.ReadLine()) - 1;
                 }
-                while (answer >= args.Length + 1);
-                Console.WriteLine($"Your move: {args[answer - 1]}");
+                while (user >= args.Length + 1);
+                Console.WriteLine($"Your move: {args[user]}");
                 Console.WriteLine($"Computer move: {args[computer]}");
-                // 5. Show HMAC
+
+                if (computer == user)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("Draw!");
+                    Console.ResetColor();  
+                    // 5. Show HMAC key
+                    Console.WriteLine($"\nHMAC key: {HashEncode(key)}\n");
+                    return;
+                }
+                int buffer = user + 1;
+                for(int i = 1; i <= args.Length/2; buffer++, i++)
+                {
+                    if(buffer == args.Length)
+                    {
+                        buffer = 0;
+                    }
+                    if(buffer == computer)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("You win!");
+                        Console.ResetColor();
+                        // 5. Show HMAC key
+                        Console.WriteLine($"\nHMAC key: {HashEncode(key)}\n");
+                        return;
+                    }
+                }
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Computer win!");
+                Console.ResetColor();
+                // 5. Show HMAC key
                 Console.WriteLine($"\nHMAC key: {HashEncode(key)}\n");
-                
             }
             else
             {
