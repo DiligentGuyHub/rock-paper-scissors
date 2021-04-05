@@ -1,0 +1,13 @@
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\bin\Debug\netcoreapp3.1\rock-paper-scissors.exe
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\bin\Debug\netcoreapp3.1\rock-paper-scissors.deps.json
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\bin\Debug\netcoreapp3.1\rock-paper-scissors.runtimeconfig.json
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\bin\Debug\netcoreapp3.1\rock-paper-scissors.runtimeconfig.dev.json
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\bin\Debug\netcoreapp3.1\rock-paper-scissors.dll
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\bin\Debug\netcoreapp3.1\rock-paper-scissors.pdb
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\obj\Debug\netcoreapp3.1\rock-paper-scissors.AssemblyInfoInputs.cache
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\obj\Debug\netcoreapp3.1\rock-paper-scissors.AssemblyInfo.cs
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\obj\Debug\netcoreapp3.1\rock-paper-scissors.csproj.CoreCompileInputs.cache
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\obj\Debug\netcoreapp3.1\rock-paper-scissors.dll
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\obj\Debug\netcoreapp3.1\rock-paper-scissors.pdb
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\obj\Debug\netcoreapp3.1\rock-paper-scissors.genruntimeconfig.cache
+C:\Users\longr\OneDrive\Документы\III\Object Oriented Programming\rock-paper-scissors\obj\Debug\netcoreapp3.1\rock-paper-scissors.csprojAssemblyReference.cache
