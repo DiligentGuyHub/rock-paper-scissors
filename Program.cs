@@ -12,7 +12,7 @@ namespace rock_paper_scissors
             if (args.Length % 2 == 1 && args.Length >= 3 && args.Distinct().Count() == args.Count())
             {
                 // 1. Generate safe 128-bit key
-                byte[] key = new byte[128];
+                byte[] key = new byte[16];
                 using (var random = new RNGCryptoServiceProvider())
                 {
                     random.GetBytes(key);
